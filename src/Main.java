@@ -116,7 +116,7 @@ public class Main {
                     break;
 
                 case 4:
-
+                    m1.evenOrNot();
 
                 case 6:
                     System.exit(0);
