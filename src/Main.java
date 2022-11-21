@@ -12,11 +12,11 @@ public class Main {
 
         if(n1>n2&&n1>n3)
         {
-            System.out.println("largest of these numbers "+n1+" "+n2+" "+n3+" is" +n1);
+            System.out.println("largest of these numbers "+n1+" "+n2+" "+n3+" is " +n1);
         } else if (n2>n1&&n2>n3) {
-            System.out.println("largest of these numbers "+n1+" "+n2+" "+n3+" is" +n2);
+            System.out.println("largest of these numbers "+n1+" "+n2+" "+n3+" is " +n2);
         } else if (n3>n1&&n3>n2) {
-            System.out.println("largest of these numbers "+n1+" "+n2+" "+n3+" is" +n3);
+            System.out.println("largest of these numbers "+n1+" "+n2+" "+n3+" is " +n3);
         }
         else
         {
@@ -33,11 +33,11 @@ public class Main {
 
         if(s1<s2&&s1<s3)
         {
-            System.out.println("smallest of these numbers "+s1+" "+s2+" "+s3+" is" +s1);
+            System.out.println("smallest of these numbers "+s1+" "+s2+" "+s3+" is " +s1);
         } else if (s2<s1&&s2<s3) {
-            System.out.println("largest of these numbers "+s1+" "+s2+" "+s3+" is" +s2);
+            System.out.println("largest of these numbers "+s1+" "+s2+" "+s3+" is " +s2);
         } else if (s3<s1&&s3<s2) {
-            System.out.println("largest of these numbers "+s1+" "+s2+" "+s3+" is" +s3);
+            System.out.println("largest of these numbers "+s1+" "+s2+" "+s3+" is " +s3);
         }
         else
         {
@@ -48,7 +48,7 @@ public class Main {
 
     void primeOrNot()
     {
-
+        System.out.println("Enter the number to check prime or not");
         int number = reader.nextInt();
 
         boolean flag = false;
@@ -69,7 +69,7 @@ public class Main {
 
     void evenOrNot()
     {
-        System.out.println("Enter the number");
+        System.out.println("Enter the number to check odd or even");
         int evenOdd = reader.nextInt();
 
         if(evenOdd%2==0)
@@ -81,6 +81,29 @@ public class Main {
             System.out.println("THe given number is odd");
         }
     }
+
+    void reverseNum()
+    {
+        int reversed = 0;
+
+        System.out.println("Enter the number to reverse");
+
+        int num = reader.nextInt();
+
+        System.out.println("Original Number: " + num);
+
+                while(num != 0) {
+
+                    int digit = num % 10;
+                    reversed = reversed * 10 + digit;
+
+                    num /= 10;
+        }
+
+        System.out.println("Reversed Number: " + reversed);
+    }
+
+
 
     public static void main(String[] args) {
 
@@ -117,6 +140,11 @@ public class Main {
 
                 case 4:
                     m1.evenOrNot();
+                    break;
+
+                case 5:
+                    m1.reverseNum();
+                    break;
 
                 case 6:
                     System.exit(0);
